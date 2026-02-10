@@ -1,0 +1,390 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\enums\\projectstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\enums\\projectstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\project\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\project\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\project\\projectfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\project\\projectfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\users\\userupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\users\\userupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\auth\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\auth\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\dto\\project\\updateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:dto\\project\\updateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|c:\\users\\o.dolzhikov\\source\\repos\\projectmaneger\\models\\projectuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14309708-98E5-41F5-B6C0-729D2CB06917}|ProjectManager.csproj|solutionrelative:models\\projectuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 92,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "Models\\Task.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Task.cs",
+              "RelativeToolTip": "Models\\Task.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskStatus.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\TaskStatus.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\TaskStatus.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\TaskStatus.cs",
+              "RelativeToolTip": "Models\\Enums\\TaskStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:12:53.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskPriority.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\TaskPriority.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\TaskPriority.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\TaskPriority.cs",
+              "RelativeToolTip": "Models\\Enums\\TaskPriority.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:13:13.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectStatus.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\ProjectStatus.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\ProjectStatus.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Enums\\ProjectStatus.cs",
+              "RelativeToolTip": "Models\\Enums\\ProjectStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:12:35.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Notification.cs",
+              "RelativeToolTip": "Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:22:00.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Project\\CreateProjectDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\CreateProjectDto.cs",
+              "RelativeToolTip": "Dto\\Project\\CreateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectFilterDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\ProjectFilterDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Project\\ProjectFilterDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\ProjectFilterDto.cs",
+              "RelativeToolTip": "Dto\\Project\\ProjectFilterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Users\\UserUpdateDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Users\\UserUpdateDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Users\\UserUpdateDto.cs",
+              "RelativeToolTip": "Dto\\Users\\UserUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Users\\UserDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Users\\UserDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Users\\UserDto.cs",
+              "RelativeToolTip": "Dto\\Users\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Auth\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Auth\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Auth\\UserLoginDto.cs",
+              "RelativeToolTip": "Dto\\Auth\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "Models\\Project.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\Project.cs",
+              "RelativeToolTip": "Models\\Project.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-10T07:07:53.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-10T07:07:53.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\UpdateProjectDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Project\\UpdateProjectDto.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Dto\\Project\\UpdateProjectDto.cs",
+              "RelativeToolTip": "Dto\\Project\\UpdateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProjectUser.cs",
+              "DocumentMoniker": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\ProjectUser.cs",
+              "RelativeDocumentMoniker": "Models\\ProjectUser.cs",
+              "ToolTip": "C:\\Users\\o.dolzhikov\\source\\repos\\ProjectManeger\\Models\\ProjectUser.cs",
+              "RelativeToolTip": "Models\\ProjectUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T07:07:53.756Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
