@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "hbxcSfRYF6868wDmqEBA8GR+rXax6ow8b3GnRWnnV6M=",
+  "Hash": "UQ8tJxLhN6GORQnAXbo91iFU58cMtkbC6WukyL1C2KA=",
   "Source": "ProjectManager",
   "BasePath": "_content/ProjectManager",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

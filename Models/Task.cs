@@ -1,4 +1,6 @@
-﻿namespace ProjectManager.Models
+﻿using ProjectManager.Models.Enums;
+using TaskStatus = ProjectManager.Models.Enums.TaskStatus;
+namespace ProjectManager.Models
 {
     public class Task
     {
@@ -14,7 +16,6 @@
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
-        // Навігаційні властивості
         public Project Project { get; set; }
         public User? AssignedTo { get; set; }
         public User CreatedBy { get; set; }
