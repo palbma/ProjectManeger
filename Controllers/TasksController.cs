@@ -53,7 +53,12 @@ namespace ProjectManager.Controllers
 
         private int GetCurrentUserId()
         {
-            return int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            // временно для теста жестко мощно и быстро задать
+            var idStr = User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(idStr))
+                return 1; // тестовый пользователь
+            return int.Parse(idStr);
         }
+
     }
 }
