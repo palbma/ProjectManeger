@@ -18,6 +18,7 @@ namespace ProjectManager.Controllers
         [HttpPost("tasks")]
         public async Task<ActionResult<TaskDto>> CreateTask(CreateTaskDto createTaskDto)
         {
+
             try
             {
                 var userId = GetCurrentUserId();

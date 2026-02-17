@@ -12,6 +12,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddSwaggerGen(c =>
 {

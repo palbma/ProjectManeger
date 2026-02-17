@@ -14,7 +14,6 @@ namespace ProjectManager.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            // Конфігурація зв'язків багато-до-багатьох
             modelBuilder.Entity<UserRole>()
                 .HasKey(ur => new { ur.UserId, ur.RoleId });
 
@@ -41,14 +40,12 @@ namespace ProjectManager.Models
                 .WithMany(u => u.ProjectUsers)
                 .HasForeignKey(pu => pu.UserId);
 
-            // Конфігурація проекту
             modelBuilder.Entity<Project>()
                 .HasOne(p => p.Manager)
                 .WithMany(u => u.OwnedProjects)
                 .HasForeignKey(p => p.ManagerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Конфігурація завдань
             modelBuilder.Entity<Task>()
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
