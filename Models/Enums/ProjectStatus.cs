@@ -4,6 +4,7 @@
     {
         Active,     // Активний
         Completed,  // Завершений
-        Cancelled   // Скасований
+        Cancelled   // Скасованийs
+
     }
 }

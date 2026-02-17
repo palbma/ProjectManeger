@@ -1,5 +1,5 @@
 ﻿using ProjectManager.Models.Enums;
-
+using TaskStatus = ProjectManager.Models.Enums.TaskStatus;
 namespace ProjectManager.Models
 {
     public class Task
@@ -8,7 +8,7 @@ namespace ProjectManager.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public int ProjectId { get; set; }
-        public ProjectManager.Models.Enums.TaskStatus Status { get; set; } = Enums.TaskStatus.ToDo;
+        public TaskStatus Status { get; set; } = TaskStatus.ToDo;
         public TaskPriority Priority { get; set; } = TaskPriority.Medium;
         public int? AssignedToId { get; set; }
         public int CreatedById { get; set; }
