@@ -48,7 +48,7 @@ namespace ProjectManager.Controllers
         {
             try
             {
-                var userId = 1;
+                var userId = GetCurrentUserId();
                 var role = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
 
                 var project = await _projectService.GetProjectById(id, userId, role);
@@ -62,6 +62,60 @@ namespace ProjectManager.Controllers
             {
                 return Forbid(ex.Message);
             }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<ProjectDto>>> GetAllProjects()
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var role = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
+                var projects = await _projectService.GetAllProjects(userId, role);
+                return Ok(projects);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Внутренняя ошибка: {ex.Message}");
+            }
+        }
+
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,ProjectManager")]
+        public async Task<ActionResult> UpdateProject(int id, UpdateProjectDto dto)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var role = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
+                await _projectService.UpdateProject(id, dto, userId, role);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+            
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,ProjectManager")]
+        public async Task<ActionResult> DeleteProject(int id)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var role = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
+                await _projectService.DeleteProject(id, userId, role);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+            
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ProjectManager.Dto.Project;
-
 namespace ProjectManager.Services.Interfaces
 {
     public interface IProjectService
