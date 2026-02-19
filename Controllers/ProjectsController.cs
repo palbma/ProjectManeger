@@ -22,7 +22,7 @@ namespace ProjectManager.Controllers
         {
             try
             {
-                var managerId = 1;
+                var managerId = GetCurrentUserId();
                 var project = await _projectService.CreateProject(createProjectDto, managerId);
                 return CreatedAtAction(nameof(GetProject), new { id = project.Id }, project);
             }
@@ -36,13 +36,13 @@ namespace ProjectManager.Controllers
             }
 
         }
-        //private int GetCurrentUserId()
-        //{
-        //    var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    if (string.IsNullOrEmpty(userIdClaim))
-        //        throw new NotImplementedException("Пользователь не авторизован");
-        //    return int.Parse(userIdClaim);
-        //}
+        private int GetCurrentUserId()
+        {
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userIdClaim))
+                throw new NotImplementedException("Пользователь не авторизован");
+            return int.Parse(userIdClaim);
+        }
         [HttpGet("{id}")]
         public async Task<ActionResult<ProjectDto>> GetProject(int id)
         {
