@@ -6,7 +6,7 @@ namespace ProjectManager.Services.Interfaces
         Task<List<ProjectDto>> GetAllProjects(int userId, string role);
         Task<ProjectDto> GetProjectById(int projectId, int userId, string role);
         Task<ProjectDto> CreateProject(CreateProjectDto createProjectDto, int managerId);
-        Task UpdateProject(int projectId, UpdateProjectDto updateProjectDto, int userId, string role);
+        Task<ProjectDto> UpdateProject(int projectId, UpdateProjectDto updateProjectDto, int userId, string role);
         Task DeleteProject(int projectId, int userId, string role);
         Task AddMember(int projectId, int memberId, int currentUserId);
         Task RemoveMember(int projectId, int memberId, int currentUserId);

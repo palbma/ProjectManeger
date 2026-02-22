@@ -140,7 +140,7 @@ namespace ProjectManager.Services.Implementations
         {
             throw new NotImplementedException();
         }
-        public async System.Threading.Tasks.Task UpdateProject(int projectId, UpdateProjectDto dto, int userId, string role)
+        public async System.Threading.Tasks.Task<ProjectDto> UpdateProject(int projectId, UpdateProjectDto dto, int userId, string role)
         {
             var project = await _context.Projects
                 .Include(p => p.ProjectUsers)
@@ -152,12 +152,23 @@ namespace ProjectManager.Services.Implementations
             if (role != "Admin" && project.ManagerId != userId)
                 throw new Exception("Вы не можете редактировать этот проект");
 
+            if (!string.IsNullOrWhiteSpace(dto.Title))
+                project.Title = dto.Title;
+            if (dto.Description != null)
+                project.Description = dto.Description;
+            if (dto.Deadline.HasValue)
+            {
+                if (dto.Deadline.Value <= DateTime.UtcNow)
+                    throw new Exception("Дедлайн должен быть в будущем");
+                project.Deadline = dto.Deadline.Value;
+            }
+            if (dto.Status.HasValue)
+                project.Status = dto.Status.Value;
 
-
-            if (dto.ParticipantIds != null)  
+            if (dto.ParticipantIds != null)
             {
                 var currentIds = project.ProjectUsers.Select(pu => pu.UserId).ToList();
-                var newIds = dto.ParticipantIds.Distinct().Where(id => id != project.ManagerId).ToList(); 
+                var newIds = dto.ParticipantIds.Distinct().Where(id => id != project.ManagerId).ToList();
 
                 var toAdd = newIds.Except(currentIds).ToList();
                 if (toAdd.Any())
@@ -190,6 +201,8 @@ namespace ProjectManager.Services.Implementations
             }
 
             await _context.SaveChangesAsync();
+
+            return await GetProjectById(projectId, userId, role);
         }
         private async Task<string> GetUserRole(int userId)
         {

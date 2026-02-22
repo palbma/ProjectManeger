@@ -83,21 +83,19 @@ namespace ProjectManager.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin,ProjectManager")]
-        public async Task<ActionResult> UpdateProject(int id, UpdateProjectDto dto)
+        public async Task<ActionResult<ProjectDto>> UpdateProject(int id, UpdateProjectDto dto)
         {
             try
             {
                 var userId = GetCurrentUserId();
                 var role = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
-                await _projectService.UpdateProject(id, dto, userId, role);
-                return NoContent();
+                var updatedProject = await _projectService.UpdateProject(id, dto, userId, role);
+                return Ok(updatedProject); 
             }
             catch (Exception ex)
             {
                 return NotFound(ex.Message);
             }
-
-            
         }
 
         [HttpDelete("{id}")]
