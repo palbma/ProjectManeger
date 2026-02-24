@@ -20,6 +20,9 @@ namespace ProjectManager.Controllers
 
         public async Task<ActionResult<ProjectDto>> CreateProject(CreateProjectDto createProjectDto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             try
             {
                 var managerId = GetCurrentUserId();
@@ -46,6 +49,8 @@ namespace ProjectManager.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ProjectDto>> GetProject(int id)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 var userId = GetCurrentUserId();
@@ -67,6 +72,7 @@ namespace ProjectManager.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProjectDto>>> GetAllProjects()
         {
+            
             try
             {
                 var userId = GetCurrentUserId();
@@ -85,6 +91,8 @@ namespace ProjectManager.Controllers
         [Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult<ProjectDto>> UpdateProject(int id, UpdateProjectDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 var userId = GetCurrentUserId();
@@ -102,6 +110,8 @@ namespace ProjectManager.Controllers
         [Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult> DeleteProject(int id)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 var userId = GetCurrentUserId();
