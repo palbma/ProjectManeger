@@ -72,7 +72,6 @@ namespace ProjectManager.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProjectDto>>> GetAllProjects()
         {
-            
             try
             {
                 var userId = GetCurrentUserId();
