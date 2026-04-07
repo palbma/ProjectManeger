@@ -17,7 +17,7 @@ namespace ProjectManager.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<List<TaskDto>> GetAllTasks(int? projectId, int? assignedToId, TaskStatus? status, int userId, string role)
+        public async Task<List<TaskDto>> GetAllTasks(int? projectId, int? assignedToId, ProjectManager.Models.Enums.TaskStatus? status, int userId, string role)
         {
             var query = _context.Tasks
                 .Include(t => t.Project)
@@ -162,6 +162,28 @@ namespace ProjectManager.Services.Implementations
                 throw new UnauthorizedAccessException("Нет прав на завершение задачи");
 
             task.Status = ProjectManager.Models.Enums.TaskStatus.Completed;
+            task.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+        }
+        public async System.Threading.Tasks.Task ChangeTaskStatus(int taskId, ProjectManager.Models.Enums.TaskStatus newStatus, int userId, string role)
+        {
+            var task = await _context.Tasks
+                .Include(t => t.Project)
+                .FirstOrDefaultAsync(t => t.Id == taskId);
+
+            if (task == null)
+                throw new KeyNotFoundException($"Задача с ID {taskId} не найдена");
+
+            // Проверка прав: админ, менеджер проекта или создатель задачи
+            bool canChangeStatus = role == "Admin" ||
+                                   task.Project.ManagerId == userId ||
+                                   task.CreatedById == userId;
+
+            if (!canChangeStatus)
+                throw new UnauthorizedAccessException("У вас нет прав на изменение статуса этой задачи");
+
+            task.Status = newStatus;
             task.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();

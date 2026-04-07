@@ -69,7 +69,7 @@ namespace ProjectManager.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet] 
         public async Task<ActionResult<List<ProjectDto>>> GetAllProjects()
         {
             try
@@ -87,7 +87,7 @@ namespace ProjectManager.Controllers
 
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,ProjectManager")]
+        //[Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult<ProjectDto>> UpdateProject(int id, UpdateProjectDto dto)
         {
             if (!ModelState.IsValid)
@@ -106,7 +106,7 @@ namespace ProjectManager.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin,ProjectManager")]
+        //[Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult> DeleteProject(int id)
         {
             if (!ModelState.IsValid)

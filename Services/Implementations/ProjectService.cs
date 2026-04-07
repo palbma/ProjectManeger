@@ -190,7 +190,7 @@ namespace ProjectManager.Services.Implementations
                 {
                     bool hasActiveTasks = await _context.Tasks
                         .AnyAsync(t => t.ProjectId == projectId && toRemove.Contains(t.AssignedToId ?? 0)
-                                    && t.Status != Models.Enums.TaskStatus.Completed && t.Status != Models.Enums.TaskStatus.Cancelled);
+                                    && t.Status != Models.Enums.TaskStatus.Completed);
                     if (hasActiveTasks)
                         throw new Exception("Нельзя удалить участников с активными задачами");
 

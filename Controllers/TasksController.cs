@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectManager.Dto.Task;
+using ProjectManager.Models;
 using ProjectManager.Services.Interfaces;
 using System.Security.Claims;
 
@@ -15,7 +16,7 @@ namespace ProjectManager.Controllers
         {
             _taskService = taskService;
         }
-        [HttpPost("tasks")]
+        [HttpPost]
         public async Task<ActionResult<TaskDto>> CreateTask(CreateTaskDto createTaskDto)
         {
 
@@ -120,6 +121,26 @@ namespace ProjectManager.Controllers
             }
             
         }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<TaskDto>>> GetAllTasks(
+        [FromQuery] int? projectId,
+        [FromQuery] int? assignedToId,
+        [FromQuery] ProjectManager.Models.Enums.TaskStatus? status)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var role = User.FindFirst(ClaimTypes.Role)?.Value ?? "Member";
+
+                var tasks = await _taskService.GetAllTasks(projectId, assignedToId, status, userId, role);
+                return Ok(tasks);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+    
         private int GetCurrentUserId()
         {
             var idStr = User?.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -127,6 +148,28 @@ namespace ProjectManager.Controllers
                 return 1; 
             return int.Parse(idStr);
         }
-
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> ChangeTaskStatus(int id, [FromBody] ChangeTaskStatusDto dto)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var role = User.FindFirst(ClaimTypes.Role)?.Value ?? "Member";
+                await _taskService.ChangeTaskStatus(id, dto.Status, userId, role);
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Forbid(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

@@ -10,6 +10,7 @@ using Task = ProjectManager.Models.Task;
 
 namespace ProjectManager.Helpers
 {
+
     public class MappingProfile : Profile
     {
         public MappingProfile()
@@ -31,7 +32,7 @@ namespace ProjectManager.Helpers
                 .ForMember(dest => dest.CreatedById, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => ProjectManager.Models.Enums.TaskStatus.ToDo)) // по умолчанию
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => ProjectManager.Models.Enums.TaskStatus.ToDo)) 
                 .ForMember(dest => dest.AssignedTo, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
                 .ForMember(dest => dest.Project, opt => opt.Ignore())
