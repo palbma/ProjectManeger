@@ -17,20 +17,23 @@ namespace ProjectManager.Services.Implementations
             _context = context;
             _mapper = mapper;
         }
+
         public async Task<List<CommentDto>> GetTaskComments(int taskId, int userId, string role)
         {
             var task = await _context.Tasks
                 .Include(t => t.Project)
                     .ThenInclude(p => p.ProjectUsers)
                 .FirstOrDefaultAsync(t => t.Id == taskId);
+
             if (task == null)
-                throw new Exception($"Задача с ID {taskId} не найдена");
+                throw new Exception($"Task with ID {taskId} was not found");
 
             bool hasAccess = role == "Admin"
                 || task.Project.ManagerId == userId
                 || task.Project.ProjectUsers.Any(pu => pu.UserId == userId);
+
             if (!hasAccess)
-                throw new Exception("У вас нет доступа к комментариям этой задачи");
+                throw new Exception("You do not have access to the comments of this task");
 
             var comments = await _context.Comments
                 .Include(c => c.User)
@@ -47,8 +50,9 @@ namespace ProjectManager.Services.Implementations
                 .Include(t => t.Project)
                     .ThenInclude(p => p.ProjectUsers)
                 .FirstOrDefaultAsync(t => t.Id == dto.TaskId);
+
             if (task == null)
-                throw new Exception($"Задача с ID {dto.TaskId} не найдена");
+                throw new Exception($"Task with ID {dto.TaskId} was not found");
 
             var comment = new Comment
             {
@@ -60,6 +64,7 @@ namespace ProjectManager.Services.Implementations
 
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
+
             var savedComment = await _context.Comments
                 .Include(c => c.User)
                 .FirstOrDefaultAsync(c => c.Id == comment.Id);
@@ -73,20 +78,19 @@ namespace ProjectManager.Services.Implementations
                 .Include(c => c.Task)
                     .ThenInclude(t => t.Project)
                 .FirstOrDefaultAsync(c => c.Id == commentId);
+
             if (comment == null)
-                throw new Exception($"Комментарий с ID {commentId} не найден");
+                throw new Exception($"Comment with ID {commentId} was not found");
 
             bool canDelete = role == "Admin"
                 || comment.UserId == userId
                 || comment.Task.Project.ManagerId == userId;
 
             if (!canDelete)
-                throw new Exception("Вы не можете удалить этот комментарий");
+                throw new Exception("You are not allowed to delete this comment");
 
             _context.Comments.Remove(comment);
             await _context.SaveChangesAsync();
         }
-   
     }
 }
-

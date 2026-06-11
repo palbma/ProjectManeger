@@ -28,7 +28,7 @@ namespace ProjectManager.Services.Implementations
         public async Task<UserResponseDto> Register(UserRegisterDto registerDto)
         {
             if (await _context.Users.AnyAsync(u => u.Email == registerDto.Email.ToLower()))
-                throw new Exception("Пользователь с таким email уже существует");
+                throw new Exception("User with this email is alredy exist");
 
             _passwordHasher.CreatePasswordHash(registerDto.Password,
                 out byte[] passwordHash, out byte[] passwordSalt);
@@ -73,11 +73,11 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(u => u.Email == loginDto.Email.ToLower());
 
             if (user == null)
-                throw new Exception("Неверный email или пароль");  
+                throw new Exception("incorect email or password");  
 
             if (!_passwordHasher.VerifyPasswordHash(loginDto.Password,
                 user.PasswordHash, user.PasswordSalt))
-                throw new Exception("Неверный email или пароль");
+                throw new Exception("incorect email or password");
 
             var token = _tokenService.CreateToken(user);
 
@@ -96,7 +96,7 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(u => u.Id == userId);
 
             if (user == null)
-                throw new Exception("Пользователь не найден");
+                throw new Exception("User not found");
 
             var userDto = _mapper.Map<UserResponseDto>(user);
             userDto.Roles = user.UserRoles.Select(ur => ur.Role.Name).ToList();

@@ -41,6 +41,7 @@ namespace ProjectManager.Services.Implementations
             }
 
             var tasks = await query.ToListAsync();
+
             return tasks.Select(t => _mapper.Map<TaskDto>(t)).ToList();
         }
 
@@ -53,13 +54,14 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException($"Задача с ID {taskId} не найдена");
+                throw new KeyNotFoundException($"Task with ID {taskId} was not found");
 
-            if (role != "Admin" && task.Project.ManagerId != userId &&
+            if (role != "Admin" &&
+                task.Project.ManagerId != userId &&
                 task.AssignedToId != userId &&
                 !_context.ProjectUsers.Any(pu => pu.ProjectId == task.ProjectId && pu.UserId == userId))
             {
-                throw new UnauthorizedAccessException("У вас нет доступа к этой задаче");
+                throw new UnauthorizedAccessException("You do not have access to this task");
             }
 
             return _mapper.Map<TaskDto>(task);
@@ -71,9 +73,10 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(p => p.Id == createTaskDto.ProjectId);
 
             if (project == null)
-                throw new KeyNotFoundException("Проект не найден");
+                throw new KeyNotFoundException("Project was not found");
 
             var task = _mapper.Map<Models.Task>(createTaskDto);
+
             task.CreatedById = userId;
             task.CreatedAt = DateTime.UtcNow;
             task.Status = ProjectManager.Models.Enums.TaskStatus.ToDo;
@@ -91,21 +94,30 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException("Задача не найдена");
+                throw new KeyNotFoundException("Task was not found");
 
-            if (role != "Admin" && task.Project.ManagerId != userId && task.CreatedById != userId)
-                throw new UnauthorizedAccessException("Нет прав на редактирование задачи");
+            if (role != "Admin" &&
+                task.Project.ManagerId != userId &&
+                task.CreatedById != userId)
+            {
+                throw new UnauthorizedAccessException("You do not have permission to edit this task");
+            }
 
             if (updateTaskDto.Title != null)
                 task.Title = updateTaskDto.Title;
+
             if (updateTaskDto.Description != null)
                 task.Description = updateTaskDto.Description;
+
             if (updateTaskDto.Status.HasValue)
                 task.Status = updateTaskDto.Status.Value;
+
             if (updateTaskDto.Priority.HasValue)
                 task.Priority = updateTaskDto.Priority.Value;
+
             if (updateTaskDto.DueDate.HasValue)
                 task.DueDate = updateTaskDto.DueDate.Value;
+
             if (updateTaskDto.AssignedToId.HasValue)
                 task.AssignedToId = updateTaskDto.AssignedToId.Value;
 
@@ -121,10 +133,14 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException("Задача не найдена");
+                throw new KeyNotFoundException("Task was not found");
 
-            if (role != "Admin" && task.Project.ManagerId != userId && task.CreatedById != userId)
-                throw new UnauthorizedAccessException("Нет прав на удаление задачи");
+            if (role != "Admin" &&
+                task.Project.ManagerId != userId &&
+                task.CreatedById != userId)
+            {
+                throw new UnauthorizedAccessException("You do not have permission to delete this task");
+            }
 
             _context.Tasks.Remove(task);
             await _context.SaveChangesAsync();
@@ -137,12 +153,13 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException("Задача не найдена");
+                throw new KeyNotFoundException("Task was not found");
 
             var user = await _context.Users.FindAsync(userId);
             var project = task.Project;
+
             if (project.ManagerId != userId)
-                throw new UnauthorizedAccessException("Нет прав на назначение задачи");
+                throw new UnauthorizedAccessException("You do not have permission to assign this task");
 
             task.AssignedToId = assignedToId;
             task.UpdatedAt = DateTime.UtcNow;
@@ -156,16 +173,17 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException("Задача не найдена");
+                throw new KeyNotFoundException("Task was not found");
 
             if (task.AssignedToId != userId && task.CreatedById != userId)
-                throw new UnauthorizedAccessException("Нет прав на завершение задачи");
+                throw new UnauthorizedAccessException("You do not have permission to complete this task");
 
             task.Status = ProjectManager.Models.Enums.TaskStatus.Completed;
             task.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
         }
+
         public async System.Threading.Tasks.Task ChangeTaskStatus(int taskId, ProjectManager.Models.Enums.TaskStatus newStatus, int userId, string role)
         {
             var task = await _context.Tasks
@@ -173,15 +191,16 @@ namespace ProjectManager.Services.Implementations
                 .FirstOrDefaultAsync(t => t.Id == taskId);
 
             if (task == null)
-                throw new KeyNotFoundException($"Задача с ID {taskId} не найдена");
+                throw new KeyNotFoundException($"Task with ID {taskId} was not found");
 
-            // Проверка прав: админ, менеджер проекта или создатель задачи
-            bool canChangeStatus = role == "Admin" ||
-                                   task.Project.ManagerId == userId ||
-                                   task.CreatedById == userId;
+            bool canChangeStatus =
+                role == "Admin" ||
+                task.Project.ManagerId == userId ||
+                task.CreatedById == userId ||
+                task.AssignedToId == userId;
 
             if (!canChangeStatus)
-                throw new UnauthorizedAccessException("У вас нет прав на изменение статуса этой задачи");
+                throw new UnauthorizedAccessException("You do not have permission to change the status of this task");
 
             task.Status = newStatus;
             task.UpdatedAt = DateTime.UtcNow;
