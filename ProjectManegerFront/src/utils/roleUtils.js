@@ -10,10 +10,8 @@ export const normalizeRole = (role) => {
   return 'member';
 };
 
-// Хелпер для получения роли независимо от регистра поля
 const getRole = (user) => {
   if (!user) return null;
-  // roles - это массив, берём первый элемент
   if (Array.isArray(user.roles) && user.roles.length > 0) {
     return user.roles[0].toLowerCase();
   }
