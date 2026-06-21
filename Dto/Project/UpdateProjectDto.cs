@@ -5,15 +5,19 @@ namespace ProjectManager.Dto.Project
 {
     public class UpdateProjectDto
     {
-        [MaxLength(200, ErrorMessage = "Максимальная длина названия – 200 символов")]
+        [MaxLength(200, ErrorMessage = "Максимальна довжина назви — 200 символів")]
         public string? Title { get; set; }
-        [MaxLength(1000, ErrorMessage = "Описание не может превышать 1000 символов")]
+
+        [MaxLength(1000, ErrorMessage = "Опис не може перевищувати 1000 символів")]
         public string? Description { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Дедлайн є обов’язковим")]
         public DateTime? Deadline { get; set; }
-        [EnumDataType(typeof(ProjectStatus), ErrorMessage = "Некорректный статус проекта")]
+
+        [EnumDataType(typeof(ProjectStatus), ErrorMessage = "Некоректний статус проєкту")]
         public ProjectStatus? Status { get; set; }
-        [Required]
-        public List<int>? ParticipantIds { get; set; } // Оновлений список учасників
+
+        [Required(ErrorMessage = "Список учасників є обов’язковим")]
+        public List<int>? ParticipantIds { get; set; } 
     }
 }

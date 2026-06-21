@@ -35,7 +35,7 @@ namespace ProjectManager.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Внутренняя ошибка сервера: {ex.Message}");
+                return StatusCode(500, $"Exception: {ex.Message}");
             }
 
         }
@@ -43,7 +43,7 @@ namespace ProjectManager.Controllers
         {
             var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userIdClaim))
-                throw new NotImplementedException("Пользователь не авторизован");
+                throw new NotImplementedException("Non authorized");
             return int.Parse(userIdClaim);
         }
         [HttpGet("{id}")]
@@ -81,13 +81,12 @@ namespace ProjectManager.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Внутренняя ошибка: {ex.Message}");
+                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
 
 
         [HttpPut("{id}")]
-        //[Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult<ProjectDto>> UpdateProject(int id, UpdateProjectDto dto)
         {
             if (!ModelState.IsValid)
@@ -106,7 +105,6 @@ namespace ProjectManager.Controllers
         }
 
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin,ProjectManager")]
         public async Task<ActionResult> DeleteProject(int id)
         {
             if (!ModelState.IsValid)
